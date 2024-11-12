@@ -50,10 +50,10 @@ public class AdministratorController {
     public String login(LoginForm form, Model model) {
         Administrator administrator = administratorService.login(form.getMailAddress(), form.getPassword());
         if (administrator == null) {
-            model.addAttribute("errorMesage", "メールアドレスまたはパスワードが不正です。");
+            model.addAttribute("errorMessage", "メールアドレスまたはパスワードが不正です。");
             return "administrator/login";
         } else {
-            session.setAttribute("administratorName ", administrator);
+            session.setAttribute("administratorName", administrator.getName());
             return "redirect:/employee/showList";
         }
     }
