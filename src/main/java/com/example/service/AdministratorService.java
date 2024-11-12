@@ -18,4 +18,5 @@ public class AdministratorService {
     public void insert(Administrator administrator) {
         repository.insert(administrator);
     }
+
 }
