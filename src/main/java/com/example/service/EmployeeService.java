@@ -22,4 +22,10 @@ public class EmployeeService {
         return employeeList;
     }
 
+    /** 従業員情報を取得する */
+    public Employee showDetail(Integer id) {
+        Employee employee = repository.load(id);
+        return employee;
+    }
+
 }
