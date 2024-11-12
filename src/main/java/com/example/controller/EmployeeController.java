@@ -25,4 +25,12 @@ public class EmployeeController {
         model.addAttribute("employeeList", employeeList);
         return "employee/list";
     }
+
+    /** 従業員情報を出⼒ */
+    @GetMapping("/showDetail")
+    public String showDetail(String id, Model model, UpdateEmployeeForm form) {
+        Employee employee = employeeService.showDetail(Integer.parseInt(id));
+        model.addAttribute("employee", employee);
+        return "employee/detail";
+    }
 }
