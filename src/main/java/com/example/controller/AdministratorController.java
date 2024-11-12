@@ -12,7 +12,7 @@ import com.example.form.InsertAdministratorForm;
 import com.example.service.AdministratorService;
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("")
 public class AdministratorController {
 
     @Autowired
@@ -30,13 +30,7 @@ public class AdministratorController {
         Administrator administrator = new Administrator();
         BeanUtils.copyProperties(form, administrator);
         administratorService.insert(administrator);
-        return "redirect://login";
+        return "redirect:/";
     }
-
-/** ログイン画面へinsertメソッドのリダイレクトを受けログイン画面へ遷移 */
-    @RequestMapping("/login")
-        public String login() {
-            return "login";
-        }
     
 }
