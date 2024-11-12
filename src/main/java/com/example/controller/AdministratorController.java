@@ -35,7 +35,7 @@ public class AdministratorController {
     }
     
     /** 「administrator/login.html」にフォワード */
-    @GetMapping("")
+    @GetMapping("/")
     public String toLogin(LoginForm form) {
         return "administrator/login";
     }
