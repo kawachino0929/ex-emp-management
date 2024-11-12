@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.example.domain.Administrator;
 import com.example.repository.AdministratorRepository;
 
 @Service
@@ -11,5 +12,10 @@ import com.example.repository.AdministratorRepository;
 public class AdministratorService {
 
     @Autowired
-    private AdministratorRepository administratorRepository;
+    private AdministratorRepository repository;
+
+    /** administratorRepositoryのinsert()メソッドで管理者情報を挿⼊する。 */
+    public void insert(Administrator administrator) {
+        repository.insert(administrator);
+    }
 }
