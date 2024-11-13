@@ -1,5 +1,10 @@
 package com.example.domain;
 
+/**
+ * 
+ * 管理者用のドメイン
+ * @author 川内野孝樹
+ */
 public class Administrator {
 
     /** ID */

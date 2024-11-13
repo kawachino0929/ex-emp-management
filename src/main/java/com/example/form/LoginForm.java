@@ -1,5 +1,10 @@
 package com.example.form;
 
+/**
+ * 
+ * ログイン用のフォーム
+ * @author 川内野孝樹
+ */
 public class LoginForm {
 
     /** メールアドレス */

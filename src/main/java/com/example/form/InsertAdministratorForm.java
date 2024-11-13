@@ -1,5 +1,10 @@
 package com.example.form;
 
+/**
+ * 
+ * 管理者用のフォーム
+ * @author 川内野孝樹
+ */
 public class InsertAdministratorForm {
 
     /** 名前 */

@@ -2,6 +2,11 @@ package com.example.domain;
 
 import java.util.Date;
 
+/**
+ * 
+ * 雇用者用のドメイン
+ * @author 川内野孝樹
+ */
 public class Employee {
 
     /** ID */
