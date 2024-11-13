@@ -15,22 +15,22 @@ import com.example.service.EmployeeService;
 @RequestMapping("/employee")
 public class EmployeeController {
 
-    @Autowired
-    private EmployeeService employeeService;
+  @Autowired
+  private EmployeeService employeeService;
 
-    /** 従業員⼀覧を出⼒ */
-    @GetMapping("/showList")
-    public String showList(Model model) {
-        List<Employee> employeeList = employeeService.showList();
-        model.addAttribute("employeeList", employeeList);
-        return "employee/list";
-    }
+  /** 従業員⼀覧を出⼒ */
+  @GetMapping("/showList")
+  public String showList(Model model) {
+    List<Employee> employeeList = employeeService.showList();
+    model.addAttribute("employeeList", employeeList);
+    return "employee/list";
+  }
 
-    /** 従業員情報を出⼒ */
-    @GetMapping("/showDetail")
-    public String showDetail(String id, Model model, UpdateEmployeeForm form) {
-        Employee employee = employeeService.showDetail(Integer.parseInt(id));
-        model.addAttribute("employee", employee);
-        return "employee/detail";
-    }
+  /** 従業員情報を出⼒ */
+  @GetMapping("/showDetail")
+  public String showDetail(String id, Model model, UpdateEmployeeForm form) {
+    Employee employee = employeeService.showDetail(Integer.parseInt(id));
+    model.addAttribute("employee", employee);
+    return "employee/detail";
+  }
 }
