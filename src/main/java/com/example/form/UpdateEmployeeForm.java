@@ -1,13 +1,17 @@
 package com.example.form;
 
+import jakarta.validation.constraints.NotBlank;
+
 /**
  * 管理者情報を変更するためのフォーム
  */
 public class UpdateEmployeeForm {
 
     /** 従業員 ID */
+    @NotBlank(message = "IDを入力してください")
     private String id;
     /** 扶養⼈数 */
+    @NotBlank(message = "数字を入力してください")
     private String dependentsCount;
     
     @Override

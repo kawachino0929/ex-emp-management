@@ -36,15 +36,6 @@ public class AdministratorController {
 
     /**
      * 
-     * バリデーション用のrequestスコープ作成
-     */
-    @ModelAttribute
-    public InsertAdministratorForm setUpForm() {
-        return new InsertAdministratorForm();
-    }
-
-    /**
-     * 
      * 管理者用のサービスクラスのメソッドが使えるようにする
      */
     @Autowired
@@ -68,7 +59,7 @@ public class AdministratorController {
      * @param InsertAdministratorForm フォームオブジェクトをリクエストスコープに⾃動的に格納
      */
     @PostMapping("/insert")
-    public String insert(@Validated InsertAdministratorForm form, BindingResult result, Model model) {
+    public String insert(@Validated InsertAdministratorForm form, BindingResult result) {
         if (result.hasErrors()) {
             return toInsert(form);
         }
