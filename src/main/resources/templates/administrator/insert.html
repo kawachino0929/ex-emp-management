@@ -50,6 +50,7 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm-12">
+                      <div th:errors="*{name}" style="color: red;"></div>
                       <label for="name"> 氏名: </label>
                       <label class="error-messages">
                         氏名を入力してください
@@ -69,6 +70,7 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm-12">
+                      <div th:errors="*{mailAddress}" style="color: red;"></div>
                       <label for="mailAddress"> メールアドレス: </label>
                       <label class="error-messages">
                         メールアドレスを入力してください
@@ -88,6 +90,7 @@
                 <div class="form-group">
                   <div class="row">
                     <div class="col-sm-12">
+                      <div th:errors="*{password}" style="color: red;"></div>
                       <label for="password"> パスワード: </label>
                       <label class="error-messages">
                         パスワードを入力してください
