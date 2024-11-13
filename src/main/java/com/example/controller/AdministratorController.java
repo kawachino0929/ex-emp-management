@@ -99,4 +99,16 @@ public class AdministratorController {
             return "redirect:/employee/showList";
         }
     }
+
+    /**
+     * 
+     * セッションスコープの中身を消し、ログアウト処理
+     * @return /へリダイレクト
+     * @param LoginForm フォームオブジェクトをリクエストスコープに⾃動的に格納
+     */
+    @GetMapping("/logout")
+    public String logout(LoginForm form) {
+        session.invalidate();
+        return "redirect:/";
+    }
 }
