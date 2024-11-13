@@ -70,6 +70,7 @@ public class EmployeeController {
   @PostMapping("/update")
   public String update(UpdateEmployeeForm form) {
     Employee employee = employeeService.showDetail(Integer.parseInt(form.getId()));
+    employee.setDependentsCount(Integer.parseInt(form.getDependentsCount()));
     employeeService.update(employee);
     return "redirect:/employee/showList"; 
   }

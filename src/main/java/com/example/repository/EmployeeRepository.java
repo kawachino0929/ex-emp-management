@@ -56,7 +56,7 @@ public class EmployeeRepository {
     /** 従業員情報を変更する(id カラムを除いた従業員情報の全てのカラムを更新できるような SQL を発⾏する)。全⾏更新されないように Where 句の指定を考える。*/
     public void update(Employee employee) {
         SqlParameterSource param = new BeanPropertySqlParameterSource(employee);
-        String updateSql = "UPDATE employees SET name = :name, image = :image, gender = :gender, hire_date = :hireDate, mail_address = :mailAddress, zip_code = :zipCode, address = :adderss, telephone = :telephone, salary = :salary, characteristics = :characteristics, dependentsCount = :dependentsCount WHERE id = :id;";
+        String updateSql = "UPDATE employees SET name = :name, image = :image, gender = :gender, hire_date = :hireDate, mail_address = :mailAddress, zip_code = :zipCode, address = :address, telephone = :telephone, salary = :salary, characteristics = :characteristics, dependents_count = :dependentsCount WHERE id = :id;";
         template.update(updateSql, param);
     }
 }
