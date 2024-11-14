@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar-header" th:fragment="frag_header">
+        <button
+          type="button"
+          class="navbar-toggle collapsed"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span> <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a
+          class="navbar-brand"
+          href="list.html"
+          th:href="@{/employee/showList}"
+        >
+          <!-- 企業ロゴ -->
+          <img
+            src="../../static/img/header_logo_small.png"
+            th:src="@{/img/header_logo_small.png}"
+          />
+        </a>
+      </div>
+</body>
+</html>
